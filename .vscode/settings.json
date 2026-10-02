@@ -1,0 +1,4 @@
+{
+    "task.saveBeforeRun": "always",
+    "C_Cpp.default.compilerPath": "D:/softwares/winlibs/mingw64/bin/g++.exe"
+}

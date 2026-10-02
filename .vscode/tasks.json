@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            // Ctrl+B 触发：编译当前文件，成功后直接运行
+            "label": "编译运行",
+            "type": "shell",
+            "command": "chcp 65001 >nul && \"D:\\softwares\\winlibs\\mingw64\\bin\\g++.exe\" -std=c++17 -O2 -Wall -static \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" && \"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
+            "options": {
+                "cwd": "${fileDirname}",
+                "shell": { "executable": "cmd.exe", "args": ["/d", "/c"] }
+            },
+            "group": { "kind": "build", "isDefault": true },
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
