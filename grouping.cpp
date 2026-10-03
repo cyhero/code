@@ -49,7 +49,7 @@ int main() {
                 if (!s[k].is_used) {
                     for (int g = 0; g < d; g++) {
                         string& t = s[k].tags[g];
-                        if (new_st[g].count(t) == 0) {
+                        if (!new_st[g].count(t)) {
                             cur++;
                             new_st[g].insert(t);
                         }
